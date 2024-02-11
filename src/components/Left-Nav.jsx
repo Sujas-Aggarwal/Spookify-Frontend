@@ -23,7 +23,7 @@ function LeftNav() {
     },
   ];
   return (
-    <div className="w-full absolute left-0 bottom-0 z-50  md:relative md:w-[50%] md:flex-col  md:h-full  gap-[6px]  flex flex-col-reverse justify-center items-center">
+    <div className="w-full absolute left-0 bottom-0 z-50  md:relative md:w-[50%] md:flex-col  md:h-full  gap-[6px]  flex flex-col-reverse justify-start items-center">
       <div className=" w-full md:rounded-[12px] p-1 md:p-4 flex flex-col items-center md:items-start  shade2 justify-around md:justify-center ">
         <h1 className="font-bold font-[Montserrat] hidden md:flex  px-2 py-3 items-center gap-2">
           <img src={logo} width={32} /> Spookify
@@ -54,7 +54,7 @@ function LeftNav() {
           })}
         </div>
       </div>
-      <div className="w-full select-none text-white h-full hidden md:flex flex-col justify-center items-start p-5 gap-2 rounded-[12px]  bg-[#ad3f3f]">
+      <div className="w-full select-none text-white h-full hidden md:flex lg:hidden flex-col justify-center items-start p-5 gap-2 rounded-[12px]  bg-[#ad3f3f]">
         <h1 className="font-bold text-2xl ">Spookify</h1>
         <p className=" text-md">
           I would rather trust than constantly living in the fear of getting
@@ -64,10 +64,10 @@ function LeftNav() {
       <div className="w-full">
         <iframe
           id="frame"
-          className="select-none rounded-[12px] h-[80px] md:h-[152px]"
+          className="select-none rounded-[12px] h-[80px] md:h-[152px] lg:h-[352px]"
           src="https://open.spotify.com/embed/track/7JJmb5XwzOO8jgpou264Ml?utm_source=generator"
           width="100%"
-          height="152"
+          height="352"
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"

@@ -6,7 +6,7 @@ function App() {
   const [currSong, setCurrSong] = useState("");
   return (
     <MyContext.Provider value={{ currSong, setCurrSong }}>
-      <div className="w-full  h-screen flex md:flex-row flex-col-reverse justify-center items-center md:p-[6px] gap-[6px]">
+      <div className="w-full  h-screen flex md:flex-row flex-col-reverse justify-center items-center md:p-[6px] gap-[8px]">
           <LeftNav />
           <RightMain />
       </div>
