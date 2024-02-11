@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import LeftNav from "@/components/Left-Nav";
-import LeftPlayer from "@/components/Left-Player";
 import RightMain from "@/components/Right-Main";
 import { useNavigate, useParams } from "react-router-dom";
 import { MyContext } from "./components/my-context.jsx";
@@ -10,13 +9,9 @@ function App() {
   const [currSong, setCurrSong] = useState("");
   return (
     <MyContext.Provider value={{ currSong, setCurrSong }}>
-      <div className="w-full h-screen flex justify-center items-center">
-        <div className="h-[calc(100%-15px)] relative flex-wrap w-[calc(100%-10px)]">
+      <div className="w-full h-screen flex justify-center items-center p-[6px] gap-[6px]">
           <LeftNav />
-          <LeftPlayer currSong={null} />
-          <RightMain route={route} />
-
-        </div>
+          <RightMain />
       </div>
     </MyContext.Provider>
   );

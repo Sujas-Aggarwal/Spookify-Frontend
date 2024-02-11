@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink, useParams } from "react-router-dom";
+import { MyContext } from "./my-context";
 function LeftNav() {
+  const { currSong, setCurrSong } = useContext(MyContext);
   const route = useParams().route;
   const nav = [
     {
@@ -20,40 +22,53 @@ function LeftNav() {
     },
   ];
   return (
-    <div className="w-[34%] flex-col  h-[calc(100%-160px)] absolute left-0 top-0 gap-[6px]  flex justify-center items-center">
+    <div className="w-[40%] flex-col  h-full  gap-[6px]  flex justify-center items-center">
       <div className=" w-full rounded-[12px] p-4 flex flex-col shade2 justify-center ">
-
         <ul>
           {nav.map((item, index) => {
             return (
-                <NavLink
-                  to={`/${item.link}`}
-                  key={index}
-                  className="flex items-center p-3 w-full hover:bg-[--color-3] rounded-[12px] transition-all duration-150 ease-in-out"
+              <NavLink
+                to={`/${item.link}`}
+                key={index}
+                className="flex items-center p-3 w-full hover:bg-[--color-3] rounded-[12px] transition-all duration-150 ease-in-out"
+              >
+                <img
+                  style={{ opacity: route == item.link ? "1" : "0.5" }}
+                  src={item.icon}
+                  className="w-5 h-5 dark:invert mt-[-2.5px]"
+                />
+                <p
+                  style={{
+                    fontWeight: route == item.link ? "600" : "normal",
+                  }}
+                  className="ml-3 text-[15px]"
                 >
-                  <img
-                    style={{ opacity: route == item.link ? "1" : "0.5" }}
-                    src={item.icon}
-                    className="w-5 h-5 dark:invert mt-[-2.5px]"
-                  />
-                  <p
-                    style={{
-                      fontWeight: route == item.link ? "600" : "normal",
-                    }}
-                    className="ml-3 text-[15px]"
-                  >
-                    {item.name}
-                  </p>
-                </NavLink>
+                  {item.name}
+                </p>
+              </NavLink>
             );
           })}
         </ul>
-
       </div>
       <div className="w-full select-none text-white h-full flex flex-col justify-center items-start p-5 gap-2 rounded-[12px]  bg-[#ad3f3f]">
-          <h1 className="font-bold text-2xl ">Spookify</h1>
-          <p className=" text-md">I would rather trust than constantly living in the fear of getting betrayed</p>
-        </div>
+        <h1 className="font-bold text-2xl ">Spookify</h1>
+        <p className=" text-md">
+          I would rather trust than constantly living in the fear of getting
+          betrayed
+        </p>
+      </div>
+      <div className="w-full">
+        <iframe
+          id="frame"
+          className="select-none rounded-[12px]"
+          src="https://open.spotify.com/embed/track/7JJmb5XwzOO8jgpou264Ml?utm_source=generator"
+          width="100%"
+          height="152"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
     </div>
   );
 }

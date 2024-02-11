@@ -10,14 +10,13 @@ function RightMain() {
   const workingRoutes = ["home", "search", "trending"];
   if (!workingRoutes.includes(route)) {
     return (
-      <div className="absolute w-[calc(66%-8px)] justify-center items-center flex rounded-[12px] h-full bg-[linear-gradient(var(--color-3),var(--color-2))] right-0 top-0">
+      <div className="w-full justify-center items-center flex rounded-[12px] h-full bg-[linear-gradient(var(--color-3),var(--color-2))] ">
         <ErrorPage />
       </div>
     );
   }
   return (
-    <div className="absolute w-[calc(66%-8px)] overflow-hidden  rounded-[12px] h-full bg-[linear-gradient(var(--color-3),var(--color-2))] right-0 top-0">
-      <div className="relative w-full h-full  flex  flex-col">
+    <div className="w-full relative overflow-hidden  rounded-[12px] h-full bg-[linear-gradient(var(--color-3),var(--color-2))] ">
         <div className="nav w-full h-[10vh] flex justify-between rounded-t-[12px] items-center top-0 left-0 absolute ">
           <div className="px-[15px] flex justify-center items-center gap-[10px]">
             <img
@@ -36,10 +35,11 @@ function RightMain() {
             />
           </div>
           <div className="flex gap-[10px] justify-center items-center px-[15px]">
-            <a href="https://www.github.com/Sujas-Aggarwal" className="shade1 px-5 rounded-full py-2 text-sm font-bold" target="_blank">Github</a>
+            <a href="https://www.github.com/Sujas-Aggarwal" className="shade1 px-4 flex justify-center gap-1 items-center rounded-full py-2 text-sm font-bold" target="_blank"> 
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" className="dark:invert -mt-[2px]" width={18}/>
+            Github</a>
             <Toggler/>
           </div>
-        </div>
       </div>
     </div>
   );
