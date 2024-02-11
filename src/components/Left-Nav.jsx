@@ -23,8 +23,8 @@ function LeftNav() {
     },
   ];
   return (
-    <div className="w-full absolute left-0 bottom-0 z-50  md:relative md:w-[50%] md:flex-col  sm:h-full  gap-[6px]  flex flex-col-reverse justify-center items-center">
-      <div className=" w-full sm:rounded-[12px] p-1 md:p-4 flex flex-col items-center md:items-start  shade2 justify-around md:justify-center ">
+    <div className="w-full absolute left-0 bottom-0 z-50  md:relative md:w-[50%] md:flex-col  md:h-full  gap-[6px]  flex flex-col-reverse justify-center items-center">
+      <div className=" w-full md:rounded-[12px] p-1 md:p-4 flex flex-col items-center md:items-start  shade2 justify-around md:justify-center ">
         <h1 className="font-bold font-[Montserrat] hidden md:flex  px-2 py-3 items-center gap-2">
           <img src={logo} width={32} /> Spookify
         </h1>
@@ -64,7 +64,7 @@ function LeftNav() {
       <div className="w-full">
         <iframe
           id="frame"
-          className="select-none rounded-[12px] h-[80px] sm:h-[152px]"
+          className="select-none rounded-[12px] h-[80px] md:h-[152px]"
           src="https://open.spotify.com/embed/track/7JJmb5XwzOO8jgpou264Ml?utm_source=generator"
           width="100%"
           height="152"

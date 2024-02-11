@@ -17,7 +17,7 @@ function RightMain() {
     );
   }
   return (
-    <div className="w-full relative overflow-hidden  sm:rounded-[12px] h-full bg-[linear-gradient(var(--color-3),var(--color-2))] ">
+    <div className="w-full relative overflow-hidden  md:rounded-[12px] h-full bg-[linear-gradient(var(--color-3),var(--color-2))] ">
         <div className="nav w-full h-[10vh] flex justify-between rounded-t-[12px] items-center top-0 left-0 absolute ">
         <h1 className="font-bold font-[Montserrat] flex   px-2 py-3 items-center gap-2">
           <img src={logo} width={30} /> Spookify
@@ -39,9 +39,9 @@ function RightMain() {
             />
           </div>
           <div className="flex gap-[10px] justify-center items-center px-[15px]">
-            <a href="https://www.github.com/Sujas-Aggarwal" className="shade1 px-2 sm:px-4 flex justify-center gap-2 items-center rounded-md sm:rounded-full py-2 text-sm font-[500] hover:opacity-60" target="_blank"> 
+            <a href="https://www.github.com/Sujas-Aggarwal" className="shade1 px-2 md:px-4 flex justify-center gap-2 items-center rounded-md md:rounded-full py-2 text-sm font-[500] hover:opacity-60" target="_blank"> 
             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" className="dark:invert -mt-[2px]" width={20}/>
-            <span className="sm:flex hidden">Github</span></a>
+            <span className="md:flex hidden">Github</span></a>
             <Toggler/>
           </div>
       </div>
