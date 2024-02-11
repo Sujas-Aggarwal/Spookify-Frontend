@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import ErrorPage from "../ErrorPage";
 import arrowLeft from "../assets/arrow-left.svg";
 import arrowRight from "../assets/arrow-right.svg";
+import logo from "/logo.ico";
 import Toggler from "./darkModeToggler";
 function RightMain() {
   const route = useParams().route;
@@ -18,7 +19,10 @@ function RightMain() {
   return (
     <div className="w-full relative overflow-hidden  sm:rounded-[12px] h-full bg-[linear-gradient(var(--color-3),var(--color-2))] ">
         <div className="nav w-full h-[10vh] flex justify-between rounded-t-[12px] items-center top-0 left-0 absolute ">
-          <div className="px-[15px] flex justify-center items-center gap-[10px]">
+        <h1 className="font-bold font-[Montserrat] flex   px-2 py-3 items-center gap-2">
+          <img src={logo} width={30} /> Spookify
+        </h1>
+          <div className="px-[15px] hidden md:flex justify-center items-center gap-[10px]">
             <img
               onClick={() => navigate(-1)}
               src={arrowLeft}
@@ -35,9 +39,9 @@ function RightMain() {
             />
           </div>
           <div className="flex gap-[10px] justify-center items-center px-[15px]">
-            <a href="https://www.github.com/Sujas-Aggarwal" className="shade1 px-4 flex justify-center gap-1 items-center rounded-full py-2 text-sm font-[500] hover:opacity-60" target="_blank"> 
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" className="dark:invert -mt-[2px]" width={18}/>
-            Github</a>
+            <a href="https://www.github.com/Sujas-Aggarwal" className="shade1 px-2 sm:px-4 flex justify-center gap-2 items-center rounded-md sm:rounded-full py-2 text-sm font-[500] hover:opacity-60" target="_blank"> 
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" className="dark:invert -mt-[2px]" width={20}/>
+            <span className="sm:flex hidden">Github</span></a>
             <Toggler/>
           </div>
       </div>
