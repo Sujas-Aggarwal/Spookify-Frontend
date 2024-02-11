@@ -6,11 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { MyContext } from "./components/my-context.jsx";
 function App() {
   const navigate = useNavigate();
-  const route = useParams().id;
-  const workingRoutes = ["home", "search", "trending"];
-  useEffect(()=>{
-    workingRoutes.includes(route) ? null:navigate("/404-not-found-error");
-  },[])
+  const route = useParams().route;
   const [currSong, setCurrSong] = useState("");
   return (
     <MyContext.Provider value={{ currSong, setCurrSong }}>

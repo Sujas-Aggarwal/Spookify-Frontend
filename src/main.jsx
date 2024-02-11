@@ -7,16 +7,12 @@ import App from "./app.jsx";
 
 const router = createBrowserRouter([
   {
-    path:"/404-not-found-error",
-    element:<ErrorPage />,
-  },
-  {
-    path: `/`,
+    path: '/',
     element: <Navigate to="/home" />,
     errorElement: <ErrorPage />,
   },
   {
-    path: `/:id`,
+    path: '/:route',
     element: <App />,
     errorElement: <ErrorPage />,
   },

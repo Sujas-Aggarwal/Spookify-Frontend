@@ -51,7 +51,7 @@ function LeftNav() {
         </ul>
 
       </div>
-      <div className="w-full h-full flex flex-col justify-center items-start p-5 gap-5 rounded-[12px]  bg-[#A59683]">
+      <div className="w-full select-none h-full flex flex-col justify-center items-start p-5 gap-5 rounded-[12px]  bg-[#ad3f3f]">
           <h1 className="font-bold text-2xl ">Spookify</h1>
           <p className=" text-md">I would rather trust than constantly living in the fear of getting betrayed</p>
         </div>
