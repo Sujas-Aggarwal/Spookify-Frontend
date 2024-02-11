@@ -1,8 +1,7 @@
 import React from "react";
-import home from "@/assets/home.svg";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 function LeftNav() {
-  const route = useParams().id;
+  const route = useParams().route;
   const nav = [
     {
       name: "Home",
@@ -35,7 +34,7 @@ function LeftNav() {
                   <img
                     style={{ opacity: route == item.link ? "1" : "0.5" }}
                     src={item.icon}
-                    className="w-5 h-5 invert mt-[-2.5px]"
+                    className="w-5 h-5 dark:invert mt-[-2.5px]"
                   />
                   <p
                     style={{
@@ -51,7 +50,7 @@ function LeftNav() {
         </ul>
 
       </div>
-      <div className="w-full select-none h-full flex flex-col justify-center items-start p-5 gap-5 rounded-[12px]  bg-[#ad3f3f]">
+      <div className="w-full select-none text-white h-full flex flex-col justify-center items-start p-5 gap-2 rounded-[12px]  bg-[#ad3f3f]">
           <h1 className="font-bold text-2xl ">Spookify</h1>
           <p className=" text-md">I would rather trust than constantly living in the fear of getting betrayed</p>
         </div>

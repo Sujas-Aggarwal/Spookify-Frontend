@@ -1,29 +1,13 @@
-import React, { useEffect } from "react";
-
+import React,{useEffect, useState} from "react";
+import moon from "../assets/moon.png";
+import sun from "../assets/sun.png";
 function Toggler() {
-  function themeHandler() {
-    // if set via local storage previously
-    if (localStorage.getItem("color-theme")) {
-      if (localStorage.getItem("color-theme") === "light") {
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("color-theme", "dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("color-theme", "light");
-      }
-
-      // if NOT set via local storage previously
-    } else {
-      if (document.documentElement.classList.contains("dark")) {
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("color-theme", "light");
-      } else {
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("color-theme", "dark");
-      }
-    }
-  }
-  return <button onClick={themeHandler}>Switch Theme</button>;
+  const [currentTheme, setCurrentTheme] = useState(localStorage.getItem("color-theme"));
+  useEffect(()=>{
+    localStorage.setItem("color-theme",currentTheme)
+    document.documentElement.classList.toggle("dark");
+  },[currentTheme])
+  return <img src={currentTheme=="dark"?moon:sun} alt={currentTheme} onClick={()=>{setCurrentTheme(currentTheme=="light"?"dark":"light")}} width={32} className="bg-[#EFF3F5] dark:invert rounded-md p-1 cursor-pointer"/>;
 }
 
 export default Toggler;

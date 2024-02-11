@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import LeftNav from "@/components/Left-Nav";
 import LeftPlayer from "@/components/Left-Player";
 import RightMain from "@/components/Right-Main";
@@ -11,7 +11,7 @@ function App() {
   return (
     <MyContext.Provider value={{ currSong, setCurrSong }}>
       <div className="w-full h-screen flex justify-center items-center">
-        <div className="h-[calc(100%-10px)] relative flex-wrap w-[calc(100%-10px)]">
+        <div className="h-[calc(100%-15px)] relative flex-wrap w-[calc(100%-10px)]">
           <LeftNav />
           <LeftPlayer currSong={null} />
           <RightMain route={route} />

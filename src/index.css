@@ -18,16 +18,16 @@ html{
 }
 
 html{
-  --color-1:#FFFFFF;
-  --color-2:#F1F6F9;
-  --color-3:#F1F6F9;
+  --color-3:#FFFFFF;
+  --color-2:#f2f6f8;
+  --color-1:#eff3f5;
   --text-color:#050505;
 
 }
 html[class="dark"]{
   --color-1: #050505;
   --color-2:#121212;
-  --color-3:#1D1D1D;
+  --color-3:#222222;
   --text-color:#FFFFFF;
 }
 
